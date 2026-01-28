@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased text-slate-900 bg-gray-100`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} antialiased text-slate-900 bg-gray-100`} suppressHydrationWarning>
         <MomentumProvider>
           <MobileContainer>
             {children}

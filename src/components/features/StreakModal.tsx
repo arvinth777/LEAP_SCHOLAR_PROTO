@@ -34,7 +34,7 @@ export const StreakModal = ({ isOpen, onClose }: StreakModalProps) => {
                         <Flame className="h-10 w-10 text-orange-500 fill-orange-500 animate-pulse" />
                     </div>
                     <h2 className="text-3xl font-bold text-slate-900">6 Day Streak!</h2>
-                    <p className="font-medium text-orange-600 mt-1">You are on fire, Priya!</p>
+                    <p className="font-medium text-orange-600 mt-1">You are on fire, Arvinth!</p>
                 </div>
 
                 {/* Calendar / History */}

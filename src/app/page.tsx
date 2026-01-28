@@ -16,7 +16,7 @@ export default function Home() {
       {/* Header */}
       <header className="flex items-center justify-between">
         <div>
-          <p className="text-slate-500 text-sm font-medium">Good Morning, Priya</p>
+          <p className="text-slate-500 text-sm font-medium">Good Morning, Arvinth</p>
           <h1 className="text-2xl font-bold text-slate-900 mt-0.5">Day 6 <span className="text-slate-400 font-normal">of 28</span></h1>
         </div>
         <FlameIcon active={true} onClick={() => setIsStreakModalOpen(true)} />
