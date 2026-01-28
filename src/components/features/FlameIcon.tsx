@@ -1,9 +1,17 @@
 import React from "react";
 import { Flame } from "lucide-react";
 
-export const FlameIcon = ({ active = false }: { active?: boolean }) => {
+interface FlameIconProps {
+    active?: boolean;
+    onClick?: () => void;
+}
+
+export const FlameIcon = ({ active = false, onClick }: FlameIconProps) => {
     return (
-        <div className={`relative flex items-center justify-center h-12 w-12 rounded-full ${active ? "bg-orange-100" : "bg-slate-100"}`}>
+        <button
+            onClick={onClick}
+            className={`relative flex items-center justify-center h-12 w-12 rounded-full transition-transform active:scale-95 ${active ? "bg-orange-100 cursor-pointer hover:bg-orange-200" : "bg-slate-100 cursor-default"}`}
+        >
             <Flame
                 className={`h-6 w-6 ${active ? "text-orange-500 fill-orange-500" : "text-slate-400"}`}
             />
@@ -12,6 +20,6 @@ export const FlameIcon = ({ active = false }: { active?: boolean }) => {
                     6
                 </span>
             )}
-        </div>
+        </button>
     );
 };

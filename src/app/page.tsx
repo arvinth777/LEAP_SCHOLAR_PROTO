@@ -1,11 +1,16 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { FlameIcon } from "@/components/features/FlameIcon";
 import { TrioCard } from "@/components/features/TrioCard";
+import { StreakModal } from "@/components/features/StreakModal";
 import { Card } from "@/components/ui/Card";
 import { Cloud, TrendingUp, Lock } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
+  const [isStreakModalOpen, setIsStreakModalOpen] = useState(false);
+
   return (
     <main className="flex-1 flex flex-col p-6 space-y-6 pb-24">
       {/* Header */}
@@ -14,8 +19,11 @@ export default function Home() {
           <p className="text-slate-500 text-sm font-medium">Good Morning, Priya</p>
           <h1 className="text-2xl font-bold text-slate-900 mt-0.5">Day 6 <span className="text-slate-400 font-normal">of 28</span></h1>
         </div>
-        <FlameIcon active={true} />
+        <FlameIcon active={true} onClick={() => setIsStreakModalOpen(true)} />
       </header>
+
+      {/* Streak Modal */}
+      <StreakModal isOpen={isStreakModalOpen} onClose={() => setIsStreakModalOpen(false)} />
 
       {/* Main Action - Daily Trio */}
       <section>
